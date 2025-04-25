@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <button class="burger" onclick="toggleSidebar()">☰</button>
+  <div class="container">
+    <div class="sidebar">
+      <div class="profile">
+        <div class="logo-container">
+          <div class="logo logo-small active"><svg width="48" height="40" viewBox="0 0 54 62" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_170_56836)">
+                <path
+                  d="M16.4103 52.7672V53.9904C17.3908 53.9904 18.276 54.3854 18.9138 55.0279L24.4965 60.0158C25.1343 60.6583 26.0195 61.0533 27 61.0533C27.9804 61.0533 28.8609 60.6535 29.5034 60.0158L35.0957 55.0232C35.7334 54.3854 36.6187 53.9904 37.5944 53.9904V52.7672H16.4103Z"
+                  fill="#60297A"></path>
+                <path
+                  d="M46.9371 0H7.06293C3.16218 0 0 3.16218 0 7.06293V46.9371C0 50.8378 3.16218 54 7.06293 54H46.9371C50.8378 54 54 50.8378 54 46.9371V7.06293C54 3.16218 50.8378 0 46.9371 0Z"
+                  fill="#60297A"></path>
+                <path d="M18.1095 12.0269H23.9588V35.3431H36.4855V40.6308H18.1095V12.0269Z" fill="white"></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_170_56836">
+                  <rect width="54" height="61.0582" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg></div>
+          <div class="logo logo-big ">
+            </svg></div>
+        </div>
+        <label class="theme-switch">
+          <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
+          <span class="slider"></span>
+        </label>      
+        <div class="students-list">
+          <ul id="studentList">
+            <li onclick="showStudent('gallery')" class="student-item">📷 Галерея</li>
+            <li onclick="showStudent('student1')" class="student-item">👨‍💻 Михайло Щур</li>
+            <li onclick="showStudent('student2')" class="student-item">👩‍💻 Олексюк Ліза</li>
+            <li onclick="showStudent('student3')" class="student-item">👩‍💻 Добродій Софія</li>
+            <li onclick="showStudent('student4')" class="student-item">👩‍💻 Шипович Олеся</li>
+            <li onclick="showStudent('student5')" class="student-item">👨‍💻 Басов Данило</li>
+            <li onclick="showStudent('student6')" class="student-item">👨‍💻 Шевченко Олексій</li>
+            <li onclick="showStudent('student7')" class="student-item">👨‍💻 Хома Назар</li>
+            <li onclick="showStudent('student8')" class="student-item">👨‍💻 Анталик Стас</li>
+            <li onclick="showStudent('student9')" class="student-item">👨‍💻 Москальов Микита</li>
+            <li onclick="showStudent('student10')" class="student-item">👨‍💻 Фіцколинець Даніїл</li>
+            <li onclick="showStudent('student11')" class="student-item">👨‍💻 Жаровський Антон</li>
+            <li onclick="showStudent('student12')" class="student-item">👨‍💻 Сахно Ілля</li>
+          </ul>
+        </div>        
+    </div></div>
+
+    <div class="content">
+      <div class="student-info active" id="gallery"> 
+        <div class="gallery">
+            <h2>Фото галерея</h2>
+            <div class="gallery-grid">
+              <img src="img/1.jpg" alt="1" onclick="openModal(this)">
+              <img src="img/2.jpg" alt="2" onclick="openModal(this)">
+              <img src="img/3.jpg" alt="3" onclick="openModal(this)">
+              <img src="img/4.jpg" alt="4" onclick="openModal(this)">
+              <img src="img/5.jpg" alt="5" onclick="openModal(this)">
+              <img src="img/6.jpeg" alt="5" onclick="openModal(this)">
+              <img src="img/7.jpeg" alt="5" onclick="openModal(this)">
+              <img src="img/8.jpeg" alt="5" onclick="openModal(this)">
+              <img src="img/9.jpeg" alt="5" onclick="openModal(this)">
+              <img src="img/10.jpeg" alt="5" onclick="openModal(this)">
+              <!-- додай інші фото -->
+            </div>
+          </div>
+      </div>
+      
+          <!-- Модальне вікно -->
+          <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+          </div>
+
+      <div class="student-info" id="student1">
+        <div class="card">
+          <img src="img/misha.jpg" alt="Student Photo">
+          <h3>Михайло Щур</h3>
+          <p>Проєкт: Онлайн щоденник</p>
+          <div class="links">
+            <a href="https://github.com/ShchurMykhailo/Filmec?authuser=1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://shchurmykhailo.github.io/Filmec/?authuser=1" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="https://www.figma.com/design/rCh9wMJmQzNWw40RwiirsR/Untitled?t=cq0SXxVWlEFadjyC-0" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="student-info" id="student2">
+        <div class="card">
+          <img src="img/liza.jpg" alt="Student Photo">
+          <h3>Олексюк Ліза</h3>
+          <p>Проєкт: Кулінарний блог</p>
+          <div class="links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="#" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+      <div class="student-info" id="student3">
+        <div class="card">
+          <img src="img/sofiya.jpg" alt="Student Photo">
+          <h3>Добродій Софія</h3>
+          <p>Студія йоги</p>
+          <div class="links">
+            <a href="https://github.com/DobrodiiSofia/yoga_studio/tree/dev?authuser=1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://yoga-lotus-path.netlify.app/" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="https://www.figma.com/design/cEnP1uvQVwO4L4fm64RDFH/Untitled?node-id=0-1&t=C51GsIV9A2rusbNB-1" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+      <div class="student-info" id="student4">
+        <div class="card">
+          <img src="img/lesya.jpg" alt="Student Photo">
+          <h3>Шипович Олеся</h3>
+          <p>Проєкт: Кулінарний блог</p>
+          <div class="links">
+            <a href="https://github.com/lessia68/tour_Dubai?authuser=1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="https://www.figma.com/design/v1FrQhJ4HYr2Y0zPBbT0Gk/Untitled?node-id=0-1&t=bwfYog9vNQuwb1hD-1" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+      <div class="student-info" id="student5">
+        <div class="card">
+          <img src="img/liza.jpg" alt="Student Photo">
+          <h3>Басов Данило</h3>
+          <p>Проєкт: Кулінарний блог</p>
+          <div class="links">
+            <a href="https://github.com/Basik456/Comfort_Realty_website?authuser=1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://basik456.github.io/Comfort_Realty_website/?authuser=1" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="https://www.figma.com/design/H3UuP0nsm2Zand2kyFSbDO/Untitled?node-id=0-1&t=gIJOgl4Cg7t803qr-1" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+      <div class="student-info" id="student6">
+        <div class="card">
+          <img src="img/olexiy.jpeg" alt="Student Photo">
+          <h3>Шевченко Олексій</h3>
+          <p>Проєкт: Кулінарний блог</p>
+          <div class="links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="#" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+      <div class="student-info" id="student7">
+        <div class="card">
+          <img src="img/liza.jpg" alt="Student Photo">
+          <h3>Хома Назар</h3>
+          <p>Проєкт: Кулінарний блог</p>
+          <div class="links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="#" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+      <div class="student-info" id="student8">
+        <div class="card">
+          <img src="img/liza.jpg" alt="Student Photo">
+          <h3>Анталик Стас</h3>
+          <p>Проєкт: Кулінарний блог</p>
+          <div class="links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="#" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+      <div class="student-info" id="student9">
+        <div class="card">
+          <img src="img/liza.jpg" alt="Student Photo">
+          <h3>Москальов Микита</h3>
+          <p>Проєкт: Кулінарний блог</p>
+          <div class="links">
+            <a href="https://github.com/NikitaMoskalov/Project-vd?authuser=1#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://nikitamoskalov.github.io/Project-vd/index_page1.html?authuser=1" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="https://www.figma.com/design/dyuKwubwLmH2uVMlHoVNh2/Untitled?node-id=0-1&t=yaqs9PicsBiAFWmp-1" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+      <div class="student-info" id="student10">
+        <div class="card">
+          <img src="img/danya.jpg" alt="Student Photo">
+          <h3>Фіцколинець Даніїл</h3>
+          <p>Проєкт: Кулінарний блог</p>
+          <div class="links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="#" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+      <div class="student-info" id="student11">
+        <div class="card">
+          <img src="img/liza.jpg" alt="Student Photo">
+          <h3>Жаровський Антон</h3>
+          <p>Проєкт: Кулінарний блог</p>
+          <div class="links">
+            <a href="https://github.com/anton-zha/Imperium_h0tel/tree/main?authuser=1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://anton-zha.github.io/Imperium_h0tel/index.html?authuser=1" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="#" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+      <div class="student-info" id="student12">
+        <div class="card">
+          <img src="img/ilya.jpg" alt="Student Photo">
+          <h3>Сахно Ілля</h3>
+          <p>Проєкт: Кулінарний блог</p>
+          <div class="links">
+            <a href="https://github.com/IllyaSakhno/bmw_01?authuser=1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://bmw-illya-sahno.netlify.app/" target="_blank"><i class="fas fa-link"></i> Сайт</a>
+            <a href="https://www.figma.com/design/4kkc8vXtozTzotTJVP8CAP/Untitled?fuid=1287400178712333659" target="_blank"><i class="fab fa-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+
+
+    </div>
+  </div>
+</body>
+<script src="main.js"></script>
+
+</html>
